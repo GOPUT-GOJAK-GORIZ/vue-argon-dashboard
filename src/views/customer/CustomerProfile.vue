@@ -101,7 +101,9 @@
                   </div>
                   <div class="col-lg-6 mb-3">
                     <div
+
                       v-show="data_cust.blocked == true"
+
                       class="btn btn-danger">
                       Your Account Blocked By Admin
                     </div>
@@ -214,6 +216,7 @@ export default {
         customer_email: "",
         customer_password: "",
         signUp_date: "",
+        blokir: true,
       },
       profile: {
         name: "",
@@ -238,8 +241,12 @@ export default {
         alert("Failed to update \n" + error);
       });
 
+
+
   },
+
   methods: {
+
     checkBoxSelect(data) {
       this.profile.gender = data;
     },
@@ -274,6 +281,8 @@ export default {
           .then((response) => {
             if (response.status == 201) {
               alert("Succesfully update profil");
+
+
             }
           })
           .catch((error) => {

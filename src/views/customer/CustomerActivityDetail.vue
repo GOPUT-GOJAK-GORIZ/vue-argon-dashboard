@@ -31,6 +31,7 @@
 
               <div class="pl-lg-4">
                 <div class="row">
+
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
@@ -100,6 +101,7 @@
                   />
                 </div>
               </div>
+
 
               <hr
                 class="my-4"
@@ -257,6 +259,9 @@
                   </div>
                 </div>
               </div>
+                  <div  v-show="data_act.id_feedback!=0&&data_act.activity_status=='finished'" class="btn btn-info mt-3" @click="readReview(data_act.id_feedback)">
+                    Read Feedback
+                  </div>
             </form>
 
             <div
@@ -284,9 +289,6 @@ export default {
   data() {
     return {
       data: "",
-      // data_feedback: {
-      //   rating: "",
-      // },
       data_act: {},
       start_loc: {},
       end_loc: {},
@@ -308,26 +310,33 @@ export default {
         this.recipient_detail = response.data[0].recipient_detail;
       }
 
+
       const url = "/admin/read/driver/" + this.data_act.id_driver;
       http.get(url).then((response) => {
         this.driver_profile = response.data[0].profile;
         this.vehicle_details = response.data[0].vehicle_details;
       });
+
     });
+    console.log(
+       "id feedback=" + this.data_act.id_feedback,
+       "id driver=" + this.$route.params.id
+          );
   },
   methods: {
-    driverDetailAction(_id) {
+    driverDetailActions(_id) {
       this.$router.push({
-        name: "Driver Profile",
+        name: "Get Driver",
         params: { id: _id },
       });
     },
-    createFeedback(_id) {
-      this.$router.push({
-        name: "Create Feedback",
+    readReview(_id){
+       this.$router.push({
+        name: "Read Feedback",
         params: { id: _id },
       });
-    },
+    },   
+
   },
 };
 </script>
