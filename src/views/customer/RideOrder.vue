@@ -41,7 +41,7 @@
                   />
                   <div
                     class="btn btn-info mt-3 mb-3"
-                    @click="serachStartLoc(start_loc.address)"
+                    @click="searchStartLoc(start_loc.address)"
                   >
                     Set Start Loc
                   </div>
@@ -80,7 +80,7 @@
 
                   <div
                     class="btn btn-info mt-3 mb-3"
-                    @click="serachEndLoc(end_loc.address)"
+                    @click="searchEndLoc(end_loc.address)"
                   >
                     Set End Loc
                   </div>
@@ -221,7 +221,7 @@ export default {
       });
     },
 
-    serachStartLoc(address) {
+    searchStartLoc(address) {
       const url =
         "https://api.opencagedata.com/geocode/v1/json?key=3ff7bb143a9d46b99978fd40bad99cef&q=" +
         address;
@@ -237,7 +237,7 @@ export default {
           this.start_loc.longitude = response.data.results[0].geometry.lng;
         });
     },
-    serachEndLoc(address) {
+    searchEndLoc(address) {
       const url =
         "https://api.opencagedata.com/geocode/v1/json?key=3ff7bb143a9d46b99978fd40bad99cef&q=" +
         address;
@@ -310,7 +310,7 @@ export default {
           }
 
            this.$router.push({
-            name: "order"
+            name: "Activity History"
           });
         })
         .catch((error) => {
