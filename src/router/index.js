@@ -44,7 +44,6 @@ import CustomerProfile from "../views/customer/CustomerProfile";
 import CustomerActivity from "../views/customer/CustomerActivity";
 import CustomerActivityDetail from "../views/customer/CustomerActivityDetail";
 import CustomerReview from "../views/customer/Review";
-import CustomerGetDriver from "../views/customer/GetDriver";
 import CustomerReadReview from "../views/customer/readReview";
 
 const routes = [
@@ -257,11 +256,6 @@ const routes = [
         components: { default: CustomerActivityDetail },
       },
       {
-        path: "GetDriver",
-        name: "Get Driver",
-        components: { default: CustomerGetDriver },
-      },
-      {
         path: "Review/:id",
         name: "Create Feedback",
         components: { default: CustomerReview },
@@ -269,7 +263,7 @@ const routes = [
       {
         path: "ReadFeedback",
         name: "Read Feedback",
-        components: { default: CustomerReadReview},
+        components: { default: CustomerReadReview },
       },
     ],
   },
