@@ -33,13 +33,13 @@
         </div>
         <!-- Navbar items -->
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link nav-link-icon" to="/dashboard">
               <i class="ni ni-planet"></i>
               <span class="nav-link-inner--text">Dashboard</span>
             </router-link>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <router-link
               class="nav-link nav-link-icon"
               to="/admin/dashboardAdmin"
@@ -47,8 +47,8 @@
               <i class="ni ni-planet"></i>
               <span class="nav-link-inner--text">Dashboard Admin</span>
             </router-link>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <router-link
               class="nav-link nav-link-icon"
               to="/driver/dashboardDriver"
@@ -65,7 +65,7 @@
               <i class="ni ni-planet"></i>
               <span class="nav-link-inner--text">Dashboard Customer</span>
             </router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link nav-link-icon" to="/register">
               <i class="ni ni-circle-08"></i>

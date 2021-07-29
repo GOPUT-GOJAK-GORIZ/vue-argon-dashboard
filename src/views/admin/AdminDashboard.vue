@@ -173,9 +173,11 @@ export default {
               break;
           }
         }
+
+        ordersChart.createChart(this.ordersChartID, this.data);
       });
 
-      ordersChart.createChart(this.ordersChartID, this.data);
+      
     },
   },
   mounted() {
