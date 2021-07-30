@@ -77,14 +77,13 @@ export default {
  methods :{
      reviewAction(){
          let formData = {
-            
                  rating: this.feedback.rating,
                  review: this.feedback.review
          }
 
         const jsonData = JSON.stringify(formData);
 
-        const url = "/cust/create/review";
+        const url = "/cust/create/review" +  this.$route.params.id;
 
         http.post(url, jsonData).then((response) => {
           if (response.status == 201) {

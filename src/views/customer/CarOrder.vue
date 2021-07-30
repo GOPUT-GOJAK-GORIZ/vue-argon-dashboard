@@ -286,7 +286,7 @@ export default {
     createOrder() {
       let formData = {
         id_customer: localStorage.getItem("customer_id"),
-        type_of_service: "transportasi mobil",
+        type_of_service: "Transportasi Mobil",
         start_loc: {
           longtitude: this.start_loc.longitude,
           latitude: this.start_loc.latitude,
