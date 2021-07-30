@@ -41,18 +41,16 @@
               </div>
               <div class="text-center">
                 <h3>
-                  Jessica Jones<span class="font-weight-light">, 27</span>
+                  {{data_driver.driver_email}}
                 </h3>
                 <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                  <i class="ni location_pin mr-2"></i>{{profile.name}}
                 </div>
                 <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>Solution Manager
-                  - Creative Tim Officer
+                  <i class="ni business_briefcase-24 mr-2"></i>{{vehicle_details.transportation_type}}
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>University of Computer
-                  Science
+                  <i class="ni education_hat mr-2"></i>{{address.city}}
                 </div>
               </div>
             </div>

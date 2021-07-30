@@ -124,7 +124,7 @@
 
           <td>
             <div class="media-body">
-              <span class="name mb-0 text-sm">{{ row.item.profile.NIK }}</span>
+              <span class="name mb-0 text-sm">{{ row.item.profile.nik }}</span>
             </div>
           </td>
 
