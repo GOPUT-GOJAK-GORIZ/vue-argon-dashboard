@@ -35,7 +35,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="driver's name"
+                      placeholder="customer's name"
                       v-model="cust_profile.name"
                     />
                   </div>
@@ -204,14 +204,7 @@
                 v-show="data_act.type_of_service == 'Antar Barang'"
               >
                 <div class="row">
-                  <div class="col-lg-6 mb-3">
-                    <p>ID</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="item_detail._id"
-                    />
-                  </div>
+                  
                   <div class="col-lg-6 mb-3">
                     <p>Weight</p>
                     <input
@@ -345,7 +338,7 @@ export default {
     }
 
     // alert(JSON.stringify(this.data_act.activity_status));
-    alert(this.data_act.id_customer);
+    // alert(this.data_act.id_customer);
   },
   methods: {
     customerDetailAction(_id) {

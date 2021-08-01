@@ -14,12 +14,6 @@
         <div class="form-group mb-0 mr-4">
           <div class="row">
             <div class="mr-1">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="yyyy-mm-dd"
-                v-model="date_search"
-              />
             </div>
           </div>
         </div>
@@ -37,7 +31,6 @@
         <template v-slot:columns>
           <th>Date and Time</th>
           <th>Type of Service</th>
-          <th>Driver ID</th>
           <th>Customer ID</th>
           <th>Actiivty Status</th>
           <th>Price</th>
@@ -62,11 +55,6 @@
             </div>
           </td>
 
-          <td>
-            <div class="media-body">
-              <span class="name mb-0 text-sm">{{ row.item.id_driver }}</span>
-            </div>
-          </td>
           <td>
             <div class="media-body">
               <span class="name mb-0 text-sm">{{ row.item.id_customer }}</span>
