@@ -94,12 +94,15 @@ export default {
         http.delete(url).then((response) => {
           if (response.status == 201) {
             alert("Succesfully delete admin"); 
+            this.loadAdmin();
           }
         })
         .catch((error) => {
             alert("Failed to delete admin \n" + error);
           });;
-      this.loadAdmin();
+
+          alert("Succesfully delete admin"); 
+      
     },
     loadAdmin(){
       const url = "admin/read/alladmin";

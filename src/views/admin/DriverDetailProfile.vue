@@ -41,16 +41,17 @@
               </div>
               <div class="text-center">
                 <h3>
-                  {{data_driver.driver_email}}
+                  {{ data_driver.driver_email }}
                 </h3>
                 <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>{{profile.name}}
+                  <i class="ni location_pin mr-2"></i>{{ profile.name }}
                 </div>
                 <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>{{vehicle_details.transportation_type}}
+                  <i class="ni business_briefcase-24 mr-2"></i
+                  >{{ vehicle_details.transportation_type }}
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>{{address.city}}
+                  <i class="ni education_hat mr-2"></i>{{ address.city }}
                 </div>
               </div>
             </div>
@@ -395,29 +396,33 @@ export default {
       blockedText: "",
     };
   },
-  mounted() {
-    const url = "/admin/read/driver/" + this.$route.params.id;
-    http.get(url).then((response) => {
-      this.data_driver = response.data[0];
-      this.profile = response.data[0].profile;
-      this.vehicle_details = response.data[0].vehicle_details;
-      this.address = response.data[0].address;
-      this.documents = response.data[0].documents;
-      if (this.data_driver.active_status == true) {
-        this.activeText = "Active";
-      } else {
-        this.activeText = "Non Active";
-      }
 
-      if (this.data_driver.blocked == true) {
-        this.blockedText = "Unblock";
-      } else {
-        this.blockedText = "Block";
-      }
-    });
+  mounted() {
+    this.load();
   },
 
   methods: {
+    load() {
+      const url = "/admin/read/driver/" + this.$route.params.id;
+      http.get(url).then((response) => {
+        this.data_driver = response.data[0];
+        this.profile = response.data[0].profile;
+        this.vehicle_details = response.data[0].vehicle_details;
+        this.address = response.data[0].address;
+        this.documents = response.data[0].documents;
+        if (this.data_driver.active_status == true) {
+          this.activeText = "Active";
+        } else {
+          this.activeText = "Non Active";
+        }
+
+        if (this.data_driver.blocked == true) {
+          this.blockedText = "Unblock";
+        } else {
+          this.blockedText = "Block";
+        }
+      });
+    },
     blockAction() {
       let jsonData = {
         blocked: true,
@@ -461,6 +466,8 @@ export default {
         .catch((error) => {
           alert("Failed to verificate this driver\n" + error);
         });
+
+      alert("Succesfully verificate this driver");
     },
     updateAction() {
       let new_profile = {
@@ -506,7 +513,7 @@ export default {
         submitted: true,
       };
 
-      const url = "/admin/update/driver/" +  this.$route.params.id;
+      const url = "/admin/update/driver/" + this.$route.params.id;
       http
         .post(url, jsonData)
         .then((response) => {

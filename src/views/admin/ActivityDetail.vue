@@ -153,14 +153,7 @@
                 v-show="data_act.type_of_service == 'Antar Barang'"
               >
                 <div class="row">
-                  <div class="col-lg-6 mb-3">
-                    <p>ID</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="item_detail._id"
-                    />
-                  </div>
+                 
                   <div class="col-lg-6 mb-3">
                     <p>Weight</p>
                     <input
