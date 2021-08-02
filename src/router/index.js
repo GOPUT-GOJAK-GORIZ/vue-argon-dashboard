@@ -133,12 +133,12 @@ const routes = [
       },
       {
         path: "customerDetail/:id",
-        name: "Customer Profile",
+        name: "Customer Profile - Admin",
         components: { default: CustomerDetailProfile },
       },
       {
         path: "driverDetail/:id",
-        name: "Driver Data",
+        name: "Driver Profile - Admin",
         components: { default: DriverDetailProfile },
       },
       {

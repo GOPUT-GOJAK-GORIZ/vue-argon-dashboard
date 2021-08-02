@@ -71,10 +71,6 @@
                       {{ year }}
                     </base-button>
                   </template>
-                  <a class="dropdown-item" @click="allActivityAction"
-                    >All Activity</a
-                  >
-                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" @click="yearChangeAction('2021')"
                     >2021</a
                   >
@@ -129,7 +125,9 @@ export default {
   },
   methods: {
     yearChangeAction(year) {
+      this.year = year;
       const url = "admin/get/totalorder/" + year;
+      this.data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       http.get(url).then((response) => {
         this.order_permonth = response.data;
         var i = 0;
@@ -180,9 +178,58 @@ export default {
       
     },
   },
-  mounted() {
-    this.yearChangeAction(this.year);
+  created() {
+    // this.yearChangeAction(this.year);
+    const url = "admin/get/totalorder/2021";
+      http.get(url).then((response) => {
+        this.order_permonth = response.data;
+        var i = 0;
+        for (i > 0; i < this.order_permonth.length; i++) {
+          switch (this.order_permonth[i]._id) {
+            case "01":
+              this.data[0] = this.order_permonth[i].totalorder;
+              break;
+            case "02":
+              this.data[1] = this.order_permonth[i].totalorder;
+              break;
+            case "03":
+              this.data[2] = this.order_permonth[i].totalorder;
+              break;
+            case "04":
+              this.data[3] = this.order_permonth[i].totalorder;
+              break;
+            case "05":
+              this.data[4] = this.order_permonth[i].totalorder;
+              break;
+            case "06":
+              this.data[5] = this.order_permonth[i].totalorder;
+              break;
+            case "07":
+              this.data[6] = this.order_permonth[i].totalorder;
+              break;
+            case "08":
+              this.data[7] = this.order_permonth[i].totalorder;
+              break;
+            case "09":
+              this.data[8] = this.order_permonth[i].totalorder;
+              break;
+            case "10":
+              this.data[9] = this.order_permonth[i].totalorder;
+              break;
+            case "11":
+              this.data[10] = this.order_permonth[i].totalorder;
+              break;
+            case "12":
+              this.data[11] = this.order_permonth[i].totalorder;
+              break;
+          }
+        }
 
+        ordersChart.createChart(this.ordersChartID, this.data);
+      });
+    
+  },
+  mounted(){
     const url2 = "/admin/get/totalorder/thismonth";
     http.get(url2).then((response) => {
       this.totalorder_month = response.data[0].totalorder;
@@ -202,7 +249,7 @@ export default {
     http.get(url5).then((response) => {
       this.totalnewcust_month = response.data[0].totaluser;
     });
-  },
+  }
 };
 </script>
 <style></style>

@@ -108,7 +108,7 @@
           </td>
 
           <td class="text-left">
-            <div class="btn btn-danger" @click="detailAction(row.item._id)">
+            <div class="btn btn-default" @click="detailAction(row.item._id)">
               Detail Activity
             </div>
           </td>
@@ -152,12 +152,12 @@ export default {
     },
     detailAction(_id) {
       this.$router.push({
-        name: "Activity Detail",
+        name: "Activity Detail - Admin",
         params: { id: _id },
       });
     },
     categoryActivityAction(category) {
-      const url = "/admin/get/history/"+category;
+      const url = "/admin/get/history/"+ category;
       http.get(url).then((response) => {
         this.list_activity = response.data;
       });

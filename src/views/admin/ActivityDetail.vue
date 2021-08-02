@@ -263,13 +263,13 @@ export default {
   methods: {
     driverDetailAction(_id) {
       this.$router.push({
-        name: "Driver Profile",
+        name: "Driver Profile - Admin",
         params: { id: _id },
       });
     },
     customerDetailAction(_id) {
       this.$router.push({
-        name: "Customer Profile",
+        name: "Customer Profile - Admin",
         params: { id: _id },
       });
     },

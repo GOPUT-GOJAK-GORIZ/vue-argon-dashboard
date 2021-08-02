@@ -141,7 +141,7 @@ export default {
     },
     editAction(_id) {
         this.$router.push({
-          name: 'Customer Profile',
+          name: 'Customer Profile - Admin',
           params: { id: _id}
         });
     },

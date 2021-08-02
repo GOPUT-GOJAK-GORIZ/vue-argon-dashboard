@@ -78,28 +78,18 @@
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Username</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Username"
-                      v-model="model.username"
-                    />
+                  <p>{{model.username}}</p>
                   </div>
                   <div class="col-lg-6 mb-3">
                     <p>Email</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Email"
-                      v-model="model.email"
-                    />
+                   <p>{{model.email}}</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Current Password</p>
                     <input
-                      type="text"
+                      type="password"
                       class="form-control"
                       placeholder="******"
                       v-model="model.curr_password"
@@ -108,7 +98,7 @@
                   <div class="col-lg-6 mb-3">
                     <p>New Password</p>
                     <input
-                      type="text"
+                      type="password"
                       class="form-control"
                       placeholder="******"
                       v-model="model.new_password"
@@ -118,7 +108,7 @@
               </div>
 
               <div class="btn btn-info mt-3" @click="updateAction">
-                Edit Profile
+                Change Password
               </div>
             </form>
           </card>
@@ -160,7 +150,7 @@ export default {
           admin_name: this.model.username,
           admin_email: this.model.email,
           admin_curr_password: this.model.curr_password,
-          admin_new_password: this.model.admin_new_password,
+          admin_new_password: this.model.new_password,
         };
 
         const jsonData = JSON.stringify(formData);
@@ -177,10 +167,10 @@ export default {
             }
           })
           .catch((error) => {
-            alert("Failed to add admin \n" + error);
+            alert("Failed to update data admin \n" + error);
           });
       } else {
-        alert("Failed to add admin");
+        alert("Failed to update data admin");
       }
     },
   },

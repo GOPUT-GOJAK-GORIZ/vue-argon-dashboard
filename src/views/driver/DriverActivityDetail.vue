@@ -31,33 +31,18 @@
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Name</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="customer's name"
-                      v-model="cust_profile.name"
-                    />
+                    <b>Name</b>
+                    <p>{{cust_profile.name}}</p>
                   </div>
                   <div class="col-lg-6 mb-3">
-                    <p>Phone Number</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="08XXXXXXXXX"
-                      v-model="cust_profile.phone_number"
-                    />
+                    <b>Phone Number</b>
+                    <p>{{cust_profile.phone_number}}</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Gender</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Gender"
-                      v-model="cust_profile.gender"
-                    />
+                    <b>Gender</b>
+                    <p>{{cust_profile.gender}}</p>
                   </div>
                 </div>
               </div>
@@ -70,18 +55,14 @@
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Date</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="yyyy-mm-dd"
-                      v-model="data_act.date"
-                    />
+                    <b>Date</b>
+                    <p>{{data_act.date}}</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Activity Status</p>
+                    <b>Activity Status</b>
+                    <br>
                     <div :class="activity_button" >
                       {{ data_act.activity_status }}
                     </div>
@@ -92,7 +73,7 @@
                       data_act.activity_status != ('finished' || 'cancelled')
                     "
                   >
-                    <p>Update Activity Status</p>
+                    <b>Update Activity Status</b>
                     <base-dropdown>
                       <template v-slot:title>
                         <base-button type="secondary" class="dropdown-toggle">
@@ -131,52 +112,28 @@
               </div>
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
-                  <p>Type of Service</p>
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-model="data_act.type_of_service"
-                  />
+                  <b>Type of Service</b>
+                  <p>{{data_act.type_of_service}}</p>
                 </div>
                 <div class="col-lg-6 mb-3">
-                  <p>Price</p>
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-model="data_act.price"
-                  />
+                  <b>Price</b>
+                  <p>{{data_act.price}}</p>
                 </div>
               </div>
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
-                  <p>Start Location</p>
-                  <label for="">Latitude</label>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    v-model="start_loc.latitude"
-                  />
-                  <label for="">Longitude</label>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    v-model="start_loc.longitude"
-                  />
+                  <b>Start Location</b>
+                  <b for="">Latitude</b>
+                  <p>{{start_loc.latitude}}</p>
+                  <b for="">Longitude</b>
+                  <p>{{start_loc.longitude}}</p>
                 </div>
                 <div class="col-lg-6 mb-3">
-                  <p>End Location</p>
-                  <label for="">Latitude</label>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    v-model="end_loc.latitude"
-                  />
-                  <label for="">Longitude</label>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    v-model="end_loc.longitude"
-                  />
+                  <b>End Location</b>
+                  <b for="">Latitude</b>
+                  <p>{{end_loc.latitude}}</p>
+                  <b for="">Longitude</b>
+                  <p>{{end_loc.longitude}}</p>
                 </div>
               </div>
               <div class="row ml-1" v-show="data_act.id_feedback != null">
@@ -190,7 +147,7 @@
                   </div>
                 </div>
               </div>
-              <hr class="my-4" />
+              <hr class="my-4" v-show="data_act.type_of_service == 'Antar Barang'" />
 
               <h6
                 class="heading-small text-muted mb-4"
@@ -206,30 +163,18 @@
                 <div class="row">
                   
                   <div class="col-lg-6 mb-3">
-                    <p>Weight</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="item_detail.weight"
-                    />
+                    <b>Weight</b>
+                    <p>{{item_detail.weight}}</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Type</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="item_detail.type"
-                    />
+                    <b>Type</b>
+                    <p>{{item_detail.type}}</p>
                   </div>
                   <div class="col-lg-6 mb-3">
-                    <p>Delivery Instruction</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="item_detail.delivery_instruction"
-                    />
+                    <b>Delivery Instruction</b>
+                    <p>{{item_detail.delivery_instruction}}</p>
                   </div>
                 </div>
               </div>
@@ -252,20 +197,12 @@
               >
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Name</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="recipient_detail.recipient_name"
-                    />
+                    <b>Name</b>
+                    <p>{{recipient_detail.recipient_name}}</p>
                   </div>
                   <div class="col-lg-6 mb-3">
-                    <p>Phone Number</p>
-                    <input
-                      type="text"
-                      class="form-control"
-                      v-model="recipient_detail.recipient_phone_number"
-                    />
+                    <b>Phone Number</b>
+                    <p>{{recipient_detail.recipient_phone_number}}</p>
                   </div>
                 </div>
               </div>

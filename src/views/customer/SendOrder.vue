@@ -199,12 +199,12 @@ export default {
       start_loc: {
         address: "",
         latitude: "",
-        longtitude: "",
+        longitude: "",
       },
       end_loc: {
         address: "",
         latitude: "",
-        longtitude: "",
+        longitude: "",
       },
       item_detail: {
         weight: 0,
@@ -359,11 +359,11 @@ export default {
         id_customer: localStorage.getItem("customer_id"),
         type_of_service: "Transportasi Motor",
         start_loc: {
-          longtitude: this.start_loc.longitude,
+          longitude: this.start_loc.longitude,
           latitude: this.start_loc.latitude,
         },
         end_loc: {
-          longtitude: this.end_loc.longitude,
+          longitude: this.end_loc.longitude,
           latitude: this.end_loc.latitude,
         },
         item_detail: {

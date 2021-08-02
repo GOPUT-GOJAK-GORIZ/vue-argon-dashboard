@@ -241,7 +241,7 @@ export default {
 
     editAction(_id) {
       this.$router.push({
-        name: "Driver Data",
+        name: "Driver Profile - Admin",
         params: { id: _id },
       });
     },

@@ -6,7 +6,7 @@
     <div class="container-fluid mt--7">
       <div class="row mt-5">
         <div class="col">
-          <activity-table type="dark" title="Daftar Admin"></activity-table>
+          <activity-table type="dark" title="Order History"></activity-table>
         </div>
       </div>
     </div>
