@@ -36,12 +36,13 @@
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Date</p>
-                    <input
+                    <b>{{data_act.date}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       placeholder="yyyy-mm-dd"
                       v-model="data_act.date"
-                    />
+                    /> -->
                   </div>
                   <div class="col-lg-6 mb-3">
                     <p>Activity Status</p>
@@ -54,51 +55,63 @@
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
                   <p>Type of Service</p>
-                  <input
+                  <b>{{data_act.type_of_service}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control"
                     v-model="data_act.type_of_service"
-                  />
+                  /> -->
                 </div>
                 <div class="col-lg-6 mb-3">
                   <p>Price</p>
-                  <input
+                  <b>{{data_act.price}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control"
-                    v-model="data_act.price"
-                  />
+                    v-model=""
+                  /> -->
                 </div>
               </div>
+              <br>
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
                   <p>Start Location</p>
-                  <label for="">Latitude</label>
-                  <input
+                  <p>Latitude</p>
+                  <b>{{start_loc.latitude}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
-                    v-model="start_loc.latitude"
-                  />
-                  <label for="">Longitude</label>
-                  <input
+                    v-model=""
+                  /> -->
+                  <br>
+                  <br>
+                  <p>Longitude</p>
+                  <b>{{start_loc.longitude}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
                     v-model="start_loc.longitude"
-                  />
+                  /> -->
                 </div>
+               
                 <div class="col-lg-6 mb-3">
                   <p>End Location</p>
-                  <label for="">Latitude</label>
-                  <input
+                  <p>Latitude</p>
+                  <b>{{end_loc.latitude}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
                     v-model="end_loc.latitude"
-                  />
-                  <label for="">Longitude</label>
-                  <input
+                  /> -->
+                  <br>
+                  <br>
+                  <p>Longitude</p>
+                  <b>{{end_loc.longitude}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
                     v-model="end_loc.longitude"
-                  />
+                  /> -->
                 </div>
               </div>
 
@@ -118,56 +131,64 @@
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Name</p>
-                    <input
+                    <b>{{driver_profile.name}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="driver_profile.name"
-                    />
+                    /> -->
                   </div>
                   <div class="col-lg-6 mb-3">
                     <p>Phone Number</p>
-                    <input
+                    <b>{{driver_profile.phone_number}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       placeholder="yyyy-mm-dd"
                       v-model="driver_profile.phone_number"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
                   <p>Gender</p>
-                  <input
+                  <b>{{driver_profile.gender}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control"
                     v-model="driver_profile.gender"
-                  />
+                  /> -->
                 </div>
                 <div class="col-lg-6 mb-3">
                   <p>Transportation Type</p>
-                  <input
+                  <b>{{vehicle_details.transportation_type}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control"
                     v-model="vehicle_details.transportation_type"
-                  />
+                  /> -->
                 </div>
               </div>
               <div class="row ml-1">
                 <div class="col-lg-6 mb-3">
                   <p>Vehicle</p>
-                  <label for="">Merk</label>
-                  <input
+                  <p>Merk</p>
+                  <b>{{vehicle_details.merk_and_type}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
                     v-model="vehicle_details.merk_and_type"
-                  />
-                  <label for="">Type</label>
-                  <input
+                  /> -->
+                  <br>
+                  <br>
+                  <p>Type</p>
+                  <b>{{vehicle_details.plat_number}}</b>
+                  <!-- <input
                     type="text"
                     class="form-control mb-1"
                     v-model="vehicle_details.plat_number"
-                  />
+                  /> -->
                 </div>
               </div>
 
@@ -187,32 +208,43 @@
                 v-show="data_act.type_of_service == 'Antar Barang'"
               >
                 <div class="row">
-                  
+                  <div class="col-lg-6 mb-3">
+                    <p>ID</p>
+                    <b>{{item_detail._id}}</b>
+                    <!-- <input
+                      type="text"
+                      class="form-control"
+                      v-model="item_detail._id"
+                    /> -->
+                  </div>
                   <div class="col-lg-6 mb-3">
                     <p>Weight</p>
-                    <input
+                    <b>{{item_detail.weight}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="item_detail.weight"
-                    />
+                    /> -->
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Type</p>
-                    <input
+                    <b>{{item_detail.type}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="item_detail.type"
-                    />
+                    /> -->
                   </div>
                   <div class="col-lg-6 mb-3">
                     <p>Delivery Instruction</p>
-                    <input
+                    <b>{item_detail.delivery_instruction}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="item_detail.delivery_instruction"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
@@ -236,19 +268,21 @@
                 <div class="row">
                   <div class="col-lg-6 mb-3">
                     <p>Name</p>
-                    <input
+                    <b>{{recipient_detail.recipient_name}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="recipient_detail.recipient_name"
-                    />
+                    /> -->
                   </div>
                   <div class="col-lg-6 mb-3">
                     <p>Phone Number</p>
-                    <input
+                    <b>{{recipient_detail.recipient_phone_number}}</b>
+                    <!-- <input
                       type="text"
                       class="form-control"
                       v-model="recipient_detail.recipient_phone_number"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>

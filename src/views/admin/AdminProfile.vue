@@ -77,17 +77,17 @@
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Username</p>
+                    <b>Username</b>
                   <p>{{model.username}}</p>
                   </div>
                   <div class="col-lg-6 mb-3">
-                    <p>Email</p>
+                    <b>Email</b>
                    <p>{{model.email}}</p>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 mb-3">
-                    <p>Current Password</p>
+                    <b>Current Password</b>
                     <input
                       type="password"
                       class="form-control"
@@ -96,7 +96,7 @@
                     />
                   </div>
                   <div class="col-lg-6 mb-3">
-                    <p>New Password</p>
+                    <b>New Password</b>
                     <input
                       type="password"
                       class="form-control"

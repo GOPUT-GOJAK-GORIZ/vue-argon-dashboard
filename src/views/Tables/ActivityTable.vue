@@ -107,8 +107,8 @@
             </div>
           </td>
 
-          <td class="text-left">
-            <div class="btn btn-default" @click="detailAction(row.item._id)">
+          <td class="media-body">
+            <div class="btn btn-primary" @click="detailAction(row.item._id)">
               Detail Activity
             </div>
           </td>

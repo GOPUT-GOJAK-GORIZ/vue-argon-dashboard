@@ -44,25 +44,25 @@
               <div class="pl-lg-4">
                 <div class="row">
                   <div class="col-lg-6">
-                    <label for="verify" class="col-sm-8 col-form-label">
+                    <b for="verify" class="col-sm-8 col-form-label">
                       Username
-                    </label>
+                    </b>
 
                     <input
                       type="email"
-                      class="form-control"
+                      class="form-control mb-4"
                       placeholder="jess"
                       v-model="model.username"
                     />
                   </div>
                   <div class="col-lg-6">
-                    <label for="verify" class="col-sm-8 col-form-label">
+                    <b for="verify" class="col-sm-8 col-form-label">
                       Email
-                    </label>
+                    </b>
 
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control mb-4"
                       placeholder="jess@gmail.com"
                       v-model="model.email"
                     />
@@ -70,23 +70,23 @@
                 </div>
                 <div class="row">
                   <div class="col-lg-6">
-                    <label for="verify" class="col-sm-8 col-form-label">
+                    <b for="verify" class="col-sm-8 col-form-label">
                       Password
-                    </label>
+                    </b>
                     <input
                       type="password"
-                      class="form-control"
+                      class="form-control mb-4"
                       placeholder="******"
                       v-model="model.password"
                     />
                   </div>
                   <div class="col-lg-6">
-                    <label for="verify" class="col-sm-8 col-form-label">
+                    <b for="verify" class="col-sm-8 col-form-label">
                       Password Verification
-                    </label>
+                    </b>
                     <input
                       type="password"
-                      class="form-control"
+                      class="form-control mb-4"
                       placeholder="******"
                       v-model="model.password_verification"
                     />

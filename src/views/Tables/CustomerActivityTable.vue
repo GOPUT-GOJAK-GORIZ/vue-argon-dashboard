@@ -83,7 +83,7 @@
           </td>
 
           <td class="text-left">
-            <div class="btn btn-danger" @click="detailAction(row.item._id)">
+            <div class="btn btn-primary" @click="detailAction(row.item._id)">
               Detail Activity
             </div>
           </td>
