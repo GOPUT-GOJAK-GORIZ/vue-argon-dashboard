@@ -143,7 +143,7 @@ const routes = [
       },
       {
         path: "activityDetail/:id",
-        name: "Activity Detail",
+        name: "Activity Detail - Admin",
         components: { default: ActivityDetail },
       },
       {

@@ -171,7 +171,13 @@
                         v-model="item_detail.delivery_instruction"
                       />
                     </div>
+                    <div class="row ml-1">
+              </div>
                   </div>
+                  <div class="col-lg-6 mb-3">
+                  <p>Price</p>
+                  <p>Rp {{ price }}</p>
+                </div>
                 </div>
               </div>
               <div class="btn btn-info mt-3" @click="createOrder">
@@ -215,6 +221,7 @@ export default {
         recipient_name: "",
         recipient_phone_number: "",
       },
+      price: "",
     };
   },
   mounted() {
@@ -372,8 +379,8 @@ export default {
           delivery_instruction: this.item_detail.delivery_instruction,
       },
       recipient_detail: {
-          recipient_name: this.recipient_detail.recipient_name,
-          recipient_phone_number: this.recipient_detail.recipient_phone_number,
+          recipient_name: this.recipient_detail.name,
+          recipient_phone_number: this.recipient_detail.phone_number,
       },
 
         price: this.price,
